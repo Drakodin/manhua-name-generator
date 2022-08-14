@@ -15,7 +15,7 @@ const makeName = (genre) => {
     let occupation = occupations[Math.floor(Math.random() * occupations.length)];
 
     // Populate the adjectives list with cultivator options, at most 2
-    let adjectiveCount = Math.floor(Math.random() * 3) - 1
+    let adjectiveCount = Math.round(Math.random() * 3 - 0.49)
     while (adjectiveCount > 0) {
         let adjective = cultivationAdjectives[Math.floor(Math.random() * cultivationAdjectives.length)]
         if (!adjectives.includes(adjective)) {
