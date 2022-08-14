@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Manhua Name Generator</title>
+        <meta name="author" content="Drakodin">
+        <meta name="description" content="A simple Manhua name generator">
+        <link rel="stylesheet" href="index.css">
+        <script src="constants.js"></script>
+        <script src="manhua.js"></script>
+    </head>
+    <div class="backdrop">
+        <div class="content">
+            <p>Manhua Name Generator</p>
+            <select id="genre-select">
+                <option selected></option>
+                <option value="cultivation">Cultivation</option>
+                <option value="romance">Romance</option>
+            </select>
+            <button onclick="generateName()">Generate!</button>
+            <button onclick="clearHistory()">Clear History</button>
+            <div class="history">
+                <div id="history-cultivation" data-contents="Cultivation Titles">
+                    <h4>Cultivation Titles</h4>
+                    <ol>
+
+                    </ol>
+                </div>
+                <div id="history-romance" data-contents="Romance Titles">
+                    <h4>Romance Titles</h4>
+                    <ol>
+
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </div>
+</html>

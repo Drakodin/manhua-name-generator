@@ -1,0 +1,57 @@
+.backdrop {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+}
+
+.content {
+    position: absolute;
+    top: 10%;
+    left: 10%;
+    z-index: 0;
+    width: 80%;
+    min-height: 80%;
+    transform-origin: center;
+    border: solid 1px black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-sizing: border-box;
+    padding-bottom: 4%;
+}
+
+.content > p {
+    font-size: 1.5em;
+    font-weight: bold;
+    font-style: italic;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.history {
+    display: flex;
+    flex-direction: row;
+    width: 90%;
+}
+
+#history-cultivation, #history-romance {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    border: 1px solid black;
+    min-height: 200px;
+    box-sizing: border-box;
+    padding: 5px;
+}
+
+#history-cultivation h4, #history-romance h4 {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 10px;
+}
+
+#history-cultivation ol, #history-romance ol {
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
