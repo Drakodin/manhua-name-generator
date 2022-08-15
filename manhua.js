@@ -42,19 +42,30 @@ const makeName = (genre) => {
         case "romance": {
             let basicOrdinal = Math.floor(Math.random() * 10);
             let basicOrdinalStr = ''
-            if (basicOrdinal == 1) {
-                basicOrdinalStr = '1st'
-            } else if (basicOrdinal == 2) {
-                basicOrdinalStr = '2nd'
-            } else if (basicOrdinal == 3) {
-                basicOrdinalStr = '3rd'
-            } else {
-                basicOrdinalStr = `${basicOrdinal}th`
+            switch (basicOrdinal) {
+                case 1: {
+                    basicOrdinalStr = '1st '
+                    break;
+                }
+                case 2: {
+                    basicOrdinalStr = '2nd '
+                    break;
+                }
+                case 3: {
+                    basicOrdinalStr = '3rd '
+                    break;
+                }
+                case 4: case 5: case 6: case 7: case 8: case 9:
+                    basicOrdinalStr = `${basicOrdinal}th `;
+                    break;
+                default: {
+                    basicOrdinalStr = ''
+                }
             }
 
             let stem = romanceStarters[Math.floor(Math.random() * romanceStarters.length)];
             let family = familyTypes[Math.floor(Math.random() * familyTypes.length)];
-            return `${stem} ${basicOrdinalStr} ${family} of the ${adjectiveStr} ${occupation}`
+            return `${stem} ${basicOrdinalStr}${family} of the ${adjectiveStr} ${occupation}`
         }
     }
 }
